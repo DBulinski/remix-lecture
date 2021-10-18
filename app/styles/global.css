@@ -1,13 +1,101 @@
+:root {
+  --font-xl: 2rem;
+  --font-l: 1.5rem;
+  --font-m: 1.25rem;
+  --font-standard: 1rem;
+
+  --spacing-1: 12px;
+  --spacing-2: 24px;
+  --spacing-3: 36px;
+  --spacing-4: 48px;
+  --spacing-5: 60px;
+
+  --primary-color: darkcyan;
+  --light-grey: lightgray;
+  --dark-grey: #444;
+
+  --text-color: #121212;
+  --text-inverted: #f0f0f0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 :focus:not(:focus-visible) {
   outline: none;
 }
 
 body {
   font-family: sans-serif;
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: 100px 1fr 1fr 100px;
+  grid-template-columns: 1fr 1fr 25vw;
+  grid-column-gap: var(--spacing-3);
+  color: var(--text-color);
+  grid-template-areas:
+    "header header header"
+    "post post list"
+    "post post list"
+    "footer footer footer";
+}
+
+h1 {
+  font-size: var(--font-xl);
+}
+
+h2 {
+  font-size: var(--font-l);
+}
+
+h3 {
+  font-size: var(--font-m);
+}
+
+header {
+  grid-area: header;
+  background-color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--spacing-3);
+  margin-bottom: var(--spacing-2);
+}
+
+main {
+  border-right: 1px solid var(--light-grey);
+  padding-left: var(--spacing-3);
+  grid-area: post;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  color: var(--text-color);
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.list {
+  grid-area: list;
+}
+
+.list ul {
+  padding: 15px 0;
+  margin: 0;
 }
 
 footer {
+  padding: var(--spacing-1);
+  color: var(--text-inverted);
+  background-color: var(--dark-grey);
+  grid-area: footer;
   text-align: center;
-  color: #ccc;
-  padding-top: 80px;
+  align-self: end;
 }

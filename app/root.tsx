@@ -1,26 +1,28 @@
-import type { LinksFunction, LoaderFunction } from "@remix-run/react";
-import {
-  Meta,
-  Links,
-  Scripts,
-  useRouteData,
-  useLiveReload
-} from "@remix-run/react";
+import type { LinksFunction, LoaderFunction } from "remix";
+import { Meta, Links, Scripts, useLoaderData, LiveReload } from "remix";
 import { Outlet } from "react-router-dom";
+import { getPosts } from "./services/getPosts";
+import { PostsList } from "./components/PostsList";
+import { Header } from "./components/Layout/Header";
 
-import stylesUrl from "./styles/global.css";
+import global from "./styles/global.css";
 
 export let links: LinksFunction = () => {
-  return [{ rel: "stylesheet", href: stylesUrl }];
+  return [
+    {
+      rel: "stylesheet",
+      href: "https://unpkg.com/modern-css-reset@1.4.0/dist/reset.min.css",
+    },
+    { rel: "stylesheet", href: global },
+  ];
 };
 
 export let loader: LoaderFunction = async () => {
-  return { date: new Date() };
+  return getPosts();
 };
 
 export default function App() {
-  let data = useRouteData();
-  useLiveReload();
+  const posts = useLoaderData();
 
   return (
     <html lang="en">
@@ -31,11 +33,13 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <Outlet />
-
-        <footer>
-          <p>This page was rendered at {data.date.toLocaleString()}</p>
-        </footer>
+        <LiveReload />
+        <Header />
+        <PostsList posts={posts} />
+        <main>
+          <Outlet />
+        </main>
+        <footer>Footer</footer>
 
         <Scripts />
       </body>
