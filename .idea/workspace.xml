@@ -2,22 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce158794-3cc9-45f8-90f3-b4adb0e2a877" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/components/Layout/Header.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/PostsList.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/routes/blog.$post.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/services/getPosts.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/posts.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/routes/admin/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/routes/admin/posts/$id.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/routes/admin/posts/add.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/routes/blog.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/routes/blog/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/styles/blog.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/Layout/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Layout/Header.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/root.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/root.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/blog.$post.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/blog/$post.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/services/getPosts.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/getPosts.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/styles/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/styles/global.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/remix.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/remix.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vercel.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/posts.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/posts.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +56,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\privateProjects\remix\remix-lecture\app\routes\blog" />
       <recent name="C:\privateProjects\remix\remix-lecture\app\routes" />
     </key>
   </component>
@@ -70,7 +68,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1634584334895</updated>
-      <workItem from="1634584341815" duration="4565000" />
+      <workItem from="1634584341815" duration="7381000" />
     </task>
     <servers />
   </component>

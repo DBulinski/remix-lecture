@@ -1,0 +1,14 @@
+.content {
+    display: grid;
+    grid-template-areas: "post list";
+    grid-template-columns: 1fr 200px;
+}
+
+.list {
+    grid-area: list;
+}
+
+.list ul {
+    padding: 15px 0;
+    margin: 0;
+}

@@ -1,8 +1,6 @@
-import type { LinksFunction, LoaderFunction } from "remix";
-import { Meta, Links, Scripts, useLoaderData, LiveReload } from "remix";
+import type { LinksFunction } from "remix";
+import { Meta, Links, Scripts, LiveReload } from "remix";
 import { Outlet } from "react-router-dom";
-import { getPosts } from "./services/getPosts";
-import { PostsList } from "./components/PostsList";
 import { Header } from "./components/Layout/Header";
 
 import global from "./styles/global.css";
@@ -17,13 +15,7 @@ export let links: LinksFunction = () => {
   ];
 };
 
-export let loader: LoaderFunction = async () => {
-  return getPosts();
-};
-
 export default function App() {
-  const posts = useLoaderData();
-
   return (
     <html lang="en">
       <head>
@@ -35,7 +27,6 @@ export default function App() {
       <body>
         <LiveReload />
         <Header />
-        <PostsList posts={posts} />
         <main>
           <Outlet />
         </main>

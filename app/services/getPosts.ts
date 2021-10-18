@@ -8,16 +8,14 @@ export interface Post {
 }
 
 const withCache = (data: Post | Post[]) => {
-  return json(data, {
-    headers: {
-      "Cache-Control": "max-age=3600",
-    },
-  });
+  return json(data);
 };
+
+const PATH = "./data/posts.json";
 
 function fetchPosts(): Promise<Post[]> {
   return fs
-    .readFile("./data/posts.json", "utf-8")
+    .readFile(PATH, "utf-8")
     .then(JSON.parse)
     .then(({ posts }) => posts);
 }
@@ -35,4 +33,13 @@ export async function getPost(id: string): Promise<Response> {
   }
 
   return withCache(post);
+}
+
+export async function updatePost(newPost: Post): Promise<void> {
+  const posts = await fetchPosts();
+  const updatedPosts = posts.map((post) =>
+    post.id === newPost.id ? newPost : post
+  );
+
+  await fs.writeFile(PATH, JSON.stringify({ posts: updatedPosts }));
 }

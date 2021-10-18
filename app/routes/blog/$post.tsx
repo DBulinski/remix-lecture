@@ -1,5 +1,5 @@
 import { LoaderFunction, useLoaderData } from "remix";
-import { getPost, Post } from "../services/getPosts";
+import { getPost, Post } from "../../services/getPosts";
 
 export const loader: LoaderFunction = ({ params }) => {
   const { post: id } = params;

@@ -30,15 +30,14 @@ body {
   font-family: sans-serif;
   display: grid;
   min-height: 100vh;
-  grid-template-rows: 100px 1fr 1fr 100px;
-  grid-template-columns: 1fr 1fr 25vw;
+  grid-template-rows: 100px 1fr 100px;
+  grid-template-columns: 1fr;
   grid-column-gap: var(--spacing-3);
   color: var(--text-color);
   grid-template-areas:
-    "header header header"
-    "post post list"
-    "post post list"
-    "footer footer footer";
+    "header"
+    "content"
+    "footer";
 }
 
 h1 {
@@ -64,9 +63,8 @@ header {
 }
 
 main {
-  border-right: 1px solid var(--light-grey);
-  padding-left: var(--spacing-3);
-  grid-area: post;
+  padding: var(--spacing-1) var(--spacing-3);
+  grid-area: content;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -80,15 +78,6 @@ a {
 
 a:hover {
   text-decoration: underline;
-}
-
-.list {
-  grid-area: list;
-}
-
-.list ul {
-  padding: 15px 0;
-  margin: 0;
 }
 
 footer {
