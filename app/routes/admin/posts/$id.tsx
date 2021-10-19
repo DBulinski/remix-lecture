@@ -41,7 +41,7 @@ export default function PostEditor(): JSX.Element {
   const errors = useActionData<{ [key in keyof Post]: boolean }>();
 
   return (
-    <Form method="post" className="form">
+    <Form method="post" className="form card">
       <Input
         error={errors?.name}
         name="name"

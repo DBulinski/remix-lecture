@@ -1,9 +1,5 @@
 .post {
-    box-shadow: 5px 5px 5px 5px #f0f0f0;
-    border-radius: 5px;
-    padding: var(--spacing-1);
     display: flex;
-    background-color: white;
     grid-gap: var(--spacing-5);
     transition: transform 0.2s;
 }
@@ -16,7 +12,7 @@
 
 .post-content > h4 {
     display: block;
-    font-size: var(--font-xl);
+    font-size: var(--font-l);
     transition: transform 0.5s;
 }
 

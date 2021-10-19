@@ -1,9 +1,19 @@
-import { Link, LinksFunction, LoaderFunction, useLoaderData } from "remix";
+import {
+  Link,
+  LinksFunction,
+  LoaderFunction,
+  MetaFunction,
+  useLoaderData,
+} from "remix";
 import { getPosts, Post } from "../../services/getPosts";
 import { ArrowRight } from "../../icons/ArrowRight";
 import blogStyles from "../../styles/blogList.css";
 
 export const loader: LoaderFunction = () => getPosts();
+
+export const meta: MetaFunction = () => ({
+  title: "Latest posts",
+});
 
 export const links: LinksFunction = () => [
   {
@@ -18,7 +28,7 @@ export default function PostPlaceholder(): JSX.Element {
   return (
     <article>
       {posts.map((post) => (
-        <Link prefetch="intent" to={`/blog/${post.id}`} className="post">
+        <Link prefetch="intent" to={`/blog/${post.id}`} className="post card">
           <img src={post.src} alt={post.name} />
           <div className="post-content">
             <h4>{post.name}</h4>

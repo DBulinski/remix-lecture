@@ -1,0 +1,19 @@
+.post-container {
+    overflow: hidden;
+    padding: var(--spacing-3);
+}
+
+.post-container > h2 {
+    margin: var(--spacing-2) 0;
+    font-size: var(--font-xl);
+}
+
+.post-container > img {
+    max-width: none;
+    width: calc(2 * var(--spacing-3) + 100%);
+    height: 300px;
+    object-fit: cover;
+    margin-left: calc(-1 * var(--spacing-3));
+    margin-right: calc(-1 * var(--spacing-3));
+    margin-top: calc(-1 * var(--spacing-3));
+}

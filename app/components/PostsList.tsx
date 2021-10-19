@@ -7,7 +7,7 @@ interface PostsListProps {
 
 export function PostsList({ posts }: PostsListProps) {
   return (
-    <div className="list">
+    <div className="list card">
       <h3>Recent posts</h3>
       <ul>
         {posts.map((post) => (

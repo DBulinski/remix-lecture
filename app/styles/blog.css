@@ -7,9 +7,11 @@
 
 .list {
     grid-area: list;
+    align-self: start;
 }
 
 .list ul {
     padding: 15px 0;
     margin: 0;
+    list-style: none;
 }

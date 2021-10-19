@@ -93,6 +93,13 @@ footer {
   align-self: end;
 }
 
+.card {
+  background-color: white;
+  padding: var(--spacing-1);
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px 5px #f0f0f0;
+}
+
 .input {
   display: flex;
   flex-direction: column;
