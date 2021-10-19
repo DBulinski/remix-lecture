@@ -5,6 +5,7 @@ export interface Post {
   id: number;
   name: string;
   content: string;
+  src: string;
 }
 
 const withCache = (data: Post | Post[]) => {

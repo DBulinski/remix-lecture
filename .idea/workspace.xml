@@ -2,16 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce158794-3cc9-45f8-90f3-b4adb0e2a877" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/routes/admin/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/routes/admin/posts/$id.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/routes/admin/posts/add.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/routes/blog.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/routes/blog/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/styles/blog.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/components/Input.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/styles/admin.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/styles/postForm.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/Layout/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Layout/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/root.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/root.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/blog.$post.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/blog/$post.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/PostsList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/PostsList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/admin/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/admin/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/admin/posts/$id.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/admin/posts/$id.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/services/getPosts.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/getPosts.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/styles/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/styles/global.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/posts.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/posts.json" afterDir="false" />
@@ -68,7 +65,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1634584334895</updated>
-      <workItem from="1634584341815" duration="7381000" />
+      <workItem from="1634584341815" duration="7955000" />
+      <workItem from="1634625264460" duration="89000" />
+      <workItem from="1634661425296" duration="6661000" />
     </task>
     <servers />
   </component>

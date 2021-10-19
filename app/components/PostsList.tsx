@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "remix";
 import { Post } from "../services/getPosts";
 
 interface PostsListProps {
@@ -12,7 +12,9 @@ export function PostsList({ posts }: PostsListProps) {
       <ul>
         {posts.map((post) => (
           <li key={post.id}>
-            <Link to={`/blog/${post.id}`}>{post.name}</Link>
+            <Link prefetch="intent" to={`/blog/${post.id}`}>
+              {post.name}
+            </Link>
           </li>
         ))}
       </ul>

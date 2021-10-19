@@ -3,6 +3,7 @@
   --font-l: 1.5rem;
   --font-m: 1.25rem;
   --font-standard: 1rem;
+  --font-small: 0.85rem;
 
   --spacing-1: 12px;
   --spacing-2: 24px;
@@ -10,7 +11,8 @@
   --spacing-4: 48px;
   --spacing-5: 60px;
 
-  --primary-color: darkcyan;
+  --primary-color: rgba(255, 118, 38, 1);
+  --primary-light: rgba(255, 118, 38, 0.8);
   --light-grey: lightgray;
   --dark-grey: #444;
 
@@ -27,6 +29,7 @@
 }
 
 body {
+  overflow-y: scroll;
   font-family: sans-serif;
   display: grid;
   min-height: 100vh;
@@ -87,4 +90,39 @@ footer {
   grid-area: footer;
   text-align: center;
   align-self: end;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: var(--spacing-2);
+}
+
+.input > label {
+  width: 100px;
+  font-size: var(--font-small);
+}
+
+.input > input, .input > textarea {
+  flex-grow: 1;
+  border-radius: 2px;
+  border: 1px solid var(--primary-color);
+}
+
+.input > input:focus, .input > textarea:focus {
+  outline: 2px solid var(--primary-color);
+}
+
+button {
+  border-radius: 4px;
+  cursor: pointer;
+  padding: var(--spacing-1) 0;
+  border: 2px solid var(--primary-light);
+  background-color: white;
+  transition: 0.2s background-color;
+  text-transform: uppercase;
+}
+
+button:hover {
+  background-color: var(--light-grey);
 }
