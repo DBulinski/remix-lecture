@@ -13,7 +13,7 @@
 
   --primary-color: rgba(255, 118, 38, 1);
   --primary-light: rgba(255, 118, 38, 0.8);
-  --light-grey: lightgray;
+  --light-grey: rgba(0, 0, 0, 0.04);
   --dark-grey: #444;
 
   --text-color: #121212;
@@ -29,8 +29,9 @@
 }
 
 body {
+  background-color: var(--light-grey);
+  font-family: "Lato", sans-serif;
   overflow-y: scroll;
-  font-family: sans-serif;
   display: grid;
   min-height: 100vh;
   grid-template-rows: 100px 1fr 100px;

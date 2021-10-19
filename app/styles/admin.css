@@ -5,6 +5,7 @@
 }
 
 .posts a {
+    background-color: white;
     min-height: 300px;
     box-shadow: 5px 5px 5px 5px #f0f0f0;
     border-radius: 5px;

@@ -1,6 +1,7 @@
 .content {
     display: grid;
     grid-template-areas: "post list";
+    grid-gap: var(--spacing-4);
     grid-template-columns: 1fr 200px;
 }
 
