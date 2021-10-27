@@ -5,11 +5,11 @@ import {
   MetaFunction,
   useLoaderData,
 } from "remix";
-import { getPosts, Post } from "../../services/getPosts";
+import { postsService, Post } from "../../services/postsService";
 import { ArrowRight } from "../../icons/ArrowRight";
-import blogStyles from "../../styles/blogList.css";
+import blogStyles from "../../styles/blog/blogList.css";
 
-export const loader: LoaderFunction = () => getPosts();
+export const loader: LoaderFunction = () => postsService.get();
 
 export const meta: MetaFunction = () => ({
   title: "Latest posts",
@@ -30,7 +30,7 @@ export default function PostPlaceholder(): JSX.Element {
       {posts.map((post) => (
         <Link
           key={post.id}
-          prefetch="intent"
+          prefetch="inte-nt"
           to={`/blog/${post.id}`}
           className="post card"
         >

@@ -1,11 +1,11 @@
 import { LinksFunction, LoaderFunction, useLoaderData } from "remix";
 import { Outlet } from "react-router-dom";
 import { PostsList } from "../components/PostsList";
-import { getPosts, Post } from "../services/getPosts";
+import { postsService, Post } from "../services/postsService";
 
-import blogStyles from "../styles/blog.css";
+import blogStyles from "../styles/blog/blog.css";
 
-export const loader: LoaderFunction = getPosts;
+export const loader: LoaderFunction = () => postsService.get();
 
 export const links: LinksFunction = () => [
   {

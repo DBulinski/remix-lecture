@@ -9,10 +9,10 @@ import {
   useLoaderData,
   useTransition,
 } from "remix";
-import { getPost, Post, updatePost } from "../../services/getPosts";
+import { Post, postsService } from "../../services/postsService";
 import { Input } from "../../components/Input";
 
-import postCss from "../../styles/postForm.css";
+import postCss from "../../styles/admin/postForm.css";
 
 export const action: ActionFunction = async ({ request, params }) => {
   const body = new URLSearchParams(await request.text());
@@ -20,7 +20,7 @@ export const action: ActionFunction = async ({ request, params }) => {
   const content = body.get("content") as string;
   const src = body.get("src") as string;
   if (name && content && src) {
-    await updatePost({ src, name, content, id: Number(params.id) });
+    await postsService.update({ src, name, content, id: Number(params.id) });
     return redirect("/admin");
   } else {
     return {
@@ -40,7 +40,7 @@ export const meta: MetaFunction = () => ({
 });
 
 export const loader: LoaderFunction = ({ params }) =>
-  getPost(String(params.id));
+  postsService.getOne(String(params.id));
 
 export default function PostEditor(): JSX.Element {
   const post = useLoaderData<Post>();

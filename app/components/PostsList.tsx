@@ -1,5 +1,5 @@
 import { Link } from "remix";
-import { Post } from "../services/getPosts";
+import { Post } from "../services/postsService";
 
 interface PostsListProps {
   posts: Post[];

@@ -1,16 +1,10 @@
-import type { MetaFunction, LinksFunction } from "remix";
-
-import stylesUrl from "../styles/index.css";
+import type { MetaFunction } from "remix";
 
 export let meta: MetaFunction = () => {
   return {
     title: "Remix Blog",
     description: "Welcome to remix blog!",
   };
-};
-
-export let links: LinksFunction = () => {
-  return [{ rel: "stylesheet", href: stylesUrl }];
 };
 
 export default function Index() {

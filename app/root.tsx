@@ -1,7 +1,7 @@
 import type { LinksFunction } from "remix";
 import { Meta, Links, Scripts, LiveReload } from "remix";
 import { Outlet } from "react-router-dom";
-import { Header } from "./components/Layout/Header";
+import { Header } from "./components/Header";
 
 import global from "./styles/global.css";
 import postsListStyles from "./styles/postsList.css";

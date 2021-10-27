@@ -4,13 +4,14 @@ import {
   MetaFunction,
   useLoaderData,
 } from "remix";
-import { getPost, Post } from "../../services/getPosts";
 
-import postCss from "../../styles/post.css";
+import { postsService, Post } from "../../services/postsService";
+
+import postCss from "../../styles/blog/post.css";
 
 export const loader: LoaderFunction = ({ params }) => {
   const { post: id } = params;
-  return getPost(String(id));
+  return postsService.getOne(String(id));
 };
 
 export const links: LinksFunction = () => [

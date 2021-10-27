@@ -5,13 +5,11 @@ import {
   MetaFunction,
   useLoaderData,
 } from "remix";
-import { getPosts, Post } from "../../services/getPosts";
+import { postsService, Post } from "../../services/postsService";
 
-import classes from "../../styles/admin.css";
+import classes from "../../styles/admin/admin.css";
 
-export const loader: LoaderFunction = () => {
-  return getPosts();
-};
+export const loader: LoaderFunction = () => postsService.get();
 
 export const links: LinksFunction = () => [
   { href: classes, rel: "stylesheet" },
