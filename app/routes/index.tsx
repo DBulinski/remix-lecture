@@ -17,10 +17,6 @@ export default function Index() {
   return (
     <div>
       <h2>Welcome to blog!</h2>
-      <p>
-        <a href="https://remix.run/dashboard/docs">Check out the docs</a> to get
-        started.
-      </p>
     </div>
   );
 }

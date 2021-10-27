@@ -1,0 +1,4 @@
+.list {
+    top: var(--spacing-2);
+    position: sticky;
+}

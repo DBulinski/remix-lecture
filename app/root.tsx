@@ -4,6 +4,7 @@ import { Outlet } from "react-router-dom";
 import { Header } from "./components/Layout/Header";
 
 import global from "./styles/global.css";
+import postsListStyles from "./styles/postsList.css";
 
 export let links: LinksFunction = () => {
   return [
@@ -12,6 +13,7 @@ export let links: LinksFunction = () => {
       href: "https://unpkg.com/modern-css-reset@1.4.0/dist/reset.min.css",
     },
     { rel: "stylesheet", href: global },
+    { rel: "stylesheet", href: postsListStyles },
   ];
 };
 
@@ -40,7 +42,7 @@ export default function App() {
         <main>
           <Outlet />
         </main>
-        <footer>Footer</footer>
+        <footer>Created for React Days 2021</footer>
 
         <Scripts />
       </body>

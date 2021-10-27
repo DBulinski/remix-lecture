@@ -44,6 +44,10 @@ body {
     "footer";
 }
 
+hr {
+  background-color: var(--light-grey);
+}
+
 h1 {
   font-size: var(--font-xl);
 }
@@ -85,12 +89,13 @@ a:hover {
 }
 
 footer {
-  padding: var(--spacing-1);
+  padding: var(--spacing-1) var(--spacing-3);
   color: var(--text-inverted);
   background-color: var(--dark-grey);
   grid-area: footer;
-  text-align: center;
   align-self: end;
+  display: flex;
+  justify-content: space-between;
 }
 
 .card {

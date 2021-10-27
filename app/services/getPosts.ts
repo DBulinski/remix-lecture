@@ -8,9 +8,7 @@ export interface Post {
   src: string;
 }
 
-const withCache = (data: Post | Post[]) => {
-  return json(data);
-};
+const delay = () => new Promise((res) => setTimeout(res, 1000));
 
 const PATH = "./data/posts.json";
 
@@ -22,7 +20,7 @@ function fetchPosts(): Promise<Post[]> {
 }
 
 export async function getPosts(): Promise<Response> {
-  return fetchPosts().then(withCache);
+  return fetchPosts().then(json);
 }
 
 export async function getPost(id: string): Promise<Response> {
@@ -33,7 +31,7 @@ export async function getPost(id: string): Promise<Response> {
     throw new Error(`Not found post with id: ${id}`);
   }
 
-  return withCache(post);
+  return json(post);
 }
 
 export async function updatePost(newPost: Post): Promise<void> {
@@ -41,6 +39,6 @@ export async function updatePost(newPost: Post): Promise<void> {
   const updatedPosts = posts.map((post) =>
     post.id === newPost.id ? newPost : post
   );
-
+  await delay();
   await fs.writeFile(PATH, JSON.stringify({ posts: updatedPosts }));
 }

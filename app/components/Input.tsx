@@ -7,6 +7,7 @@ interface InputProps {
   error?: boolean;
   type?: HTMLInputTypeAttribute;
   multiline?: boolean;
+  disabled?: boolean;
 }
 
 export function Input({ label, error, multiline, ...inputProps }: InputProps) {
@@ -14,7 +15,7 @@ export function Input({ label, error, multiline, ...inputProps }: InputProps) {
     <div className="input">
       <label htmlFor={inputProps.name}>{label}</label>
       {multiline ? (
-        <textarea id={inputProps.name} {...inputProps} />
+        <textarea id={inputProps.name} rows={8} {...inputProps} />
       ) : (
         <input id={inputProps.name} {...inputProps} />
       )}

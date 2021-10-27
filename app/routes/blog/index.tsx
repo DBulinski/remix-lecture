@@ -26,9 +26,14 @@ export default function PostPlaceholder(): JSX.Element {
   const posts = useLoaderData<Post[]>();
 
   return (
-    <article>
+    <section>
       {posts.map((post) => (
-        <Link prefetch="intent" to={`/blog/${post.id}`} className="post card">
+        <Link
+          key={post.id}
+          prefetch="intent"
+          to={`/blog/${post.id}`}
+          className="post card"
+        >
           <img src={post.src} alt={post.name} />
           <div className="post-content">
             <h4>{post.name}</h4>
@@ -39,6 +44,6 @@ export default function PostPlaceholder(): JSX.Element {
           </div>
         </Link>
       ))}
-    </article>
+    </section>
   );
 }

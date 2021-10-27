@@ -15,6 +15,7 @@ export function PostsList({ posts }: PostsListProps) {
             <Link prefetch="intent" to={`/blog/${post.id}`}>
               {post.name}
             </Link>
+            <hr />
           </li>
         ))}
       </ul>
