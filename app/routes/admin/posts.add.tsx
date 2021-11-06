@@ -1,5 +1,5 @@
 import { PostForm } from "../../components/PostForm";
 
-export function PostsAdder() {
+export default function PostsAdder() {
   return <PostForm disabled={false} buttonText="Add" />;
 }
