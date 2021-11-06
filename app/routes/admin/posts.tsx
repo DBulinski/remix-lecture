@@ -1,15 +1,23 @@
 import {
+  ActionFunction,
   Link,
   LinksFunction,
   LoaderFunction,
   MetaFunction,
+  redirect,
   useLoaderData,
 } from "remix";
-import { Cross } from "../../icons/Cross";
+import { RemoveItemForm } from "../../components/RemoveItemForm";
 import { Plus } from "../../icons/Plus";
 import { postsService, Post } from "../../services/postsService";
 
 import classes from "../../styles/admin/admin.css";
+
+export const action: ActionFunction = async ({ request }) => {
+  const params = new URLSearchParams(request.url.split("?").pop());
+  await postsService.remove(Number(params.get("id")));
+  return redirect("/admin/posts");
+};
 
 export const loader: LoaderFunction = () => postsService.get();
 
@@ -36,13 +44,7 @@ export default function Admin() {
         <Link to={`/admin/posts/${post.id}`} prefetch="intent" key={post.id}>
           <img loading="lazy" src={post.src} alt={post.name} />
           <span>{post.name}</span>
-          <button
-            onClick={(e) => e.stopPropagation()}
-            type="submit"
-            className="remove-button"
-          >
-            <Cross />
-          </button>
+          <RemoveItemForm id={post.id} />
         </Link>
       ))}
     </div>
