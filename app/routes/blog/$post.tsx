@@ -11,7 +11,7 @@ import postCss from "../../styles/blog/post.css";
 
 export const loader: LoaderFunction = ({ params }) => {
   const { post: id } = params;
-  return postsService.getOne(String(id));
+  return postsService.getOne(Number(id));
 };
 
 export const links: LinksFunction = () => [

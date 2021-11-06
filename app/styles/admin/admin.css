@@ -5,6 +5,7 @@
 }
 
 .posts a {
+    position: relative;
     background-color: white;
     min-height: 300px;
     box-shadow: 5px 5px 5px 5px #f0f0f0;
@@ -15,6 +16,26 @@
     flex-direction: column;
     justify-content: space-between;
     text-align: center;
+}
+
+.remove-button {
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    right: calc(-1 * var(--spacing-2));
+    top: calc(-1 * var(--spacing-1));
+    padding: 0;
+    filter: opacity(0.5);
+    transform: scale(1.4) translateX(-70%);
+    transition: 0.3s filter;
+}
+
+.remove-button:hover{
+    filter: opacity(1);
+}
+
+.remove-button:hover {
+    background-color: transparent;
 }
 
 .posts a > img {
@@ -29,4 +50,20 @@
 
 .posts a:hover {
     transform: scale(1.02);
+}
+
+a.add-post {
+    align-items: center;
+    background-color: var(--light-grey);
+}
+
+.icon-container {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-container svg {
+    transform: scale(3);
 }

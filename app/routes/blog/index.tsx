@@ -1,3 +1,4 @@
+import * as React from "react";
 import {
   Link,
   LinksFunction,
@@ -30,7 +31,7 @@ export default function PostPlaceholder(): JSX.Element {
       {posts.map((post) => (
         <Link
           key={post.id}
-          prefetch="inte-nt"
+          prefetch="intent"
           to={`/blog/${post.id}`}
           className="post card"
         >

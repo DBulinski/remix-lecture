@@ -7,7 +7,7 @@ export function Header(): JSX.Element {
         <Link to="/blog">Blog</Link>
       </h1>
 
-      <Link to="/admin">Admin</Link>
+      <Link to="/admin/posts">Admin</Link>
     </header>
   );
 }

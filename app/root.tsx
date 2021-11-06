@@ -1,10 +1,21 @@
+import * as React from "react";
 import type { LinksFunction } from "remix";
-import { Meta, Links, Scripts, LiveReload } from "remix";
+import {
+  Meta,
+  Links,
+  Scripts,
+  LiveReload,
+  useCatch,
+  useTransition,
+} from "remix";
 import { Outlet } from "react-router-dom";
+import { Loader } from "./components/Loader";
+import { useScrollRestoration } from "./utils/useScrollRestoration";
 import { Header } from "./components/Header";
 
 import global from "./styles/global.css";
 import postsListStyles from "./styles/postsList.css";
+import loaderStyles from "./styles/components/loader.css";
 
 export let links: LinksFunction = () => {
   return [
@@ -14,10 +25,15 @@ export let links: LinksFunction = () => {
     },
     { rel: "stylesheet", href: global },
     { rel: "stylesheet", href: postsListStyles },
+    { rel: "stylesheet", href: loaderStyles },
   ];
 };
 
-export default function App() {
+function PageSkeleton({
+  children,
+}: React.PropsWithChildren<Record<string, unknown>>) {
+  const { state } = useTransition();
+
   return (
     <html lang="en">
       <head>
@@ -39,9 +55,8 @@ export default function App() {
       <body>
         <LiveReload />
         <Header />
-        <main>
-          <Outlet />
-        </main>
+        {state !== "idle" && <Loader />}
+        <main>{children}</main>
         <footer>Created for React Days 2021</footer>
 
         <Scripts />
@@ -50,26 +65,22 @@ export default function App() {
   );
 }
 
-export function ErrorBoundary({ error }: { error: Error }) {
-  return (
-    <html lang="en">
-      <head>
-        <meta charSet="utf-8" />
-        <link rel="icon" href="/favicon.png" type="image/png" />
-        <title>Oops!</title>
-      </head>
-      <body>
-        <div>
-          <h1>App Error</h1>
-          <pre>{error.message}</pre>
-          <p>
-            Replace this UI with what you want users to see when your app throws
-            uncaught errors.
-          </p>
-        </div>
+export default function App() {
+  useScrollRestoration();
 
-        <Scripts />
-      </body>
-    </html>
+  return (
+    <PageSkeleton>
+      <Outlet />
+    </PageSkeleton>
+  );
+}
+
+export function CatchBoundary() {
+  const error = useCatch();
+
+  return (
+    <PageSkeleton>
+      {error.status === 404 ? <h2>Page Not found</h2> : <h2>Unknown error</h2>}
+    </PageSkeleton>
   );
 }

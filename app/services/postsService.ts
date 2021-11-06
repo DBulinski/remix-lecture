@@ -10,8 +10,10 @@ export interface Post {
 
 export interface PostsService {
   get: () => Promise<Response>;
-  getOne: (id: string) => Promise<Response>;
+  getOne: (id: number) => Promise<Response>;
+  add: (newPost: Omit<Post, "id">) => Promise<void>;
   update: (newPost: Post) => Promise<void>;
+  remove: (id: number) => Promise<void>;
 }
 
 const delay = () => new Promise((res) => setTimeout(res, 1000));
@@ -25,11 +27,16 @@ function fetchPosts(): Promise<Post[]> {
     .then(({ posts }) => posts);
 }
 
+async function savePosts(posts: Post[]): Promise<void> {
+  await delay();
+  await fs.writeFile(PATH, JSON.stringify({ posts }));
+}
+
 export const postsService: PostsService = {
   get: () => fetchPosts().then(json),
   getOne: async (id) => {
     const posts = await fetchPosts();
-    const post = posts.find((post) => post.id === Number(id));
+    const post = posts.find((post) => post.id === id);
 
     if (!post) {
       throw new Error(`Not found post with id: ${id}`);
@@ -37,12 +44,24 @@ export const postsService: PostsService = {
 
     return json(post);
   },
-  update: async (newPost: Post) => {
+  add: async (newPost) => {
+    const posts = await fetchPosts();
+    const updatedPosts: Post[] = [
+      { ...newPost, id: posts.length + 1 },
+      ...posts,
+    ];
+    await savePosts(updatedPosts);
+  },
+  update: async (newPost) => {
     const posts = await fetchPosts();
     const updatedPosts = posts.map((post) =>
       post.id === newPost.id ? newPost : post
     );
-    await delay();
-    await fs.writeFile(PATH, JSON.stringify({ posts: updatedPosts }));
+    await savePosts(updatedPosts);
+  },
+  remove: async (id) => {
+    const posts = await fetchPosts();
+    const updatedPosts = posts.filter((post) => post.id !== id);
+    await savePosts(updatedPosts);
   },
 };

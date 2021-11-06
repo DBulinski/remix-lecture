@@ -1,61 +1,46 @@
 import {
   ActionFunction,
-  Form,
   LinksFunction,
-  LoaderFunction,
   MetaFunction,
   redirect,
   useActionData,
-  useLoaderData,
   useTransition,
 } from "remix";
 import { PostForm } from "../../components/PostForm";
 import { Post, postsService } from "../../services/postsService";
-import { Input } from "../../components/Input";
+import postFormCss from "../../styles/admin/postForm.css";
+import { validateURL } from "../../utils/validateURL";
 
-import postCss from "../../styles/admin/postForm.css";
-
-export const action: ActionFunction = async ({ request, params }) => {
+export const action: ActionFunction = async ({ request }) => {
   const body = new URLSearchParams(await request.text());
   const name = body.get("name") as string;
   const content = body.get("content") as string;
   const src = body.get("src") as string;
-  if (name && content && src) {
-    await postsService.update({ src, name, content, id: Number(params.id) });
+  if (name && content && validateURL(src)) {
+    await postsService.add({ src, name, content });
     return redirect("/admin/posts");
   } else {
     return {
       name: !name,
       content: !content,
-      src: !src,
+      src: !validateURL(src),
     };
   }
 };
 
 export const links: LinksFunction = () => [
-  { rel: "stylesheet", href: postCss },
+  { rel: "stylesheet", href: postFormCss },
 ];
 
 export const meta: MetaFunction = () => ({
-  title: "Update post",
+  title: "Add new post",
 });
 
-export const loader: LoaderFunction = ({ params }) =>
-  postsService.getOne(Number(params.id));
-
-export default function PostEditor(): JSX.Element {
-  const post = useLoaderData<Post>();
+export default function PostAdder() {
   const { state } = useTransition();
   const errors = useActionData<{ [key in keyof Post]: boolean }>();
 
   const isSubmitting = state === "submitting";
 
-  return (
-    <PostForm
-      buttonText="Update"
-      disabled={isSubmitting}
-      errors={errors}
-      initialValues={post}
-    />
-  );
+  return <PostForm buttonText="Add" disabled={isSubmitting} errors={errors} />;
 }
