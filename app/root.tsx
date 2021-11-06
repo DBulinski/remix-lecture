@@ -1,5 +1,5 @@
 import * as React from "react";
-import type { LinksFunction } from "remix";
+import type { LinksFunction, MetaFunction } from "remix";
 import {
   Meta,
   Links,
@@ -16,6 +16,10 @@ import { Header } from "./components/Header";
 import global from "./styles/global.css";
 import postsListStyles from "./styles/postsList.css";
 import loaderStyles from "./styles/components/loader.css";
+
+export const meta: MetaFunction = () => {
+  return { title: "React Days 2021" };
+};
 
 export let links: LinksFunction = () => {
   return [

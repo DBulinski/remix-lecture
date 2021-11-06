@@ -2,30 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce158794-3cc9-45f8-90f3-b4adb0e2a877" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/__mocks__/styleMock.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/Loader.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/PostForm.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/icons/Cross.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/icons/Plus.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/routes/admin/posts.add.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/styles/components/loader.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/utils/useScrollRestoration.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/utils/validateURL.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/entry.server.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/entry.server.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/root.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/root.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/admin/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/admin/posts.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/admin/posts.$id.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/admin/posts.$id.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/blog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/blog.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/blog/$post.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/blog/$post.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/blog/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/blog/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/services/postsService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/postsService.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/styles/admin/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/styles/admin/admin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/styles/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/styles/global.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +71,7 @@
       <workItem from="1635867392461" duration="7264000" />
       <workItem from="1636048420097" duration="5806000" />
       <workItem from="1636097689180" duration="626000" />
-      <workItem from="1636203479760" duration="10045000" />
+      <workItem from="1636203479760" duration="11354000" />
     </task>
     <servers />
   </component>
