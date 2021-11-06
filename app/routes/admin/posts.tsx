@@ -1,5 +1,4 @@
 import {
-  Link,
   LinksFunction,
   LoaderFunction,
   MetaFunction,
@@ -26,12 +25,12 @@ export default function Admin() {
 
   return (
     <div className="posts">
-      <Link className="add-post" to="/admin/posts/add">
+      <a className="add-post" href="#">
         <div className="icon-container">
           <Plus />
         </div>
         <span>Add post</span>
-      </Link>
+      </a>
       {posts.map((post) => (
         <Link to={`/admin/posts/${post.id}`} prefetch="intent" key={post.id}>
           <img loading="lazy" src={post.src} alt={post.name} />
