@@ -46,10 +46,8 @@ export const postsService: PostsService = {
   },
   add: async (newPost) => {
     const posts = await fetchPosts();
-    const updatedPosts: Post[] = [
-      { ...newPost, id: posts.length + 1 },
-      ...posts,
-    ];
+    const nextId = Math.max(...posts.map(({ id }) => id)) + 1;
+    const updatedPosts: Post[] = [{ ...newPost, id: nextId }, ...posts];
     await savePosts(updatedPosts);
   },
   update: async (newPost) => {

@@ -1,18 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ce158794-3cc9-45f8-90f3-b4adb0e2a877" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/components/RemoveItemForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/entry.client.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/entry.client.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/entry.server.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/entry.server.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/root.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/root.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/admin/posts.$id.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/admin/posts.$id.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/admin/posts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/admin/posts.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/utils/useScrollRestoration.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils/useScrollRestoration.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/posts.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/posts.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    <list default="true" id="04f97155-5219-4b9d-ba49-b2a8450706d1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/app/services/postsService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/postsService.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
