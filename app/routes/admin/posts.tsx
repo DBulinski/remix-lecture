@@ -33,7 +33,7 @@ export default function Admin() {
         <span>Add post</span>
       </Link>
       {posts.map((post) => (
-        <a href="#" key={post.id}>
+        <Link to={`/admin/posts/${post.id}`} prefetch="intent" key={post.id}>
           <img loading="lazy" src={post.src} alt={post.name} />
           <span>{post.name}</span>
           <button
@@ -43,7 +43,7 @@ export default function Admin() {
           >
             <Cross />
           </button>
-        </a>
+        </Link>
       ))}
     </div>
   );
