@@ -1,6 +1,5 @@
 import {
   ActionFunction,
-  Form,
   LinksFunction,
   LoaderFunction,
   MetaFunction,
@@ -11,7 +10,6 @@ import {
 } from "remix";
 import { PostForm } from "../../components/PostForm";
 import { Post, postsService } from "../../services/postsService";
-import { Input } from "../../components/Input";
 
 import postCss from "../../styles/admin/postForm.css";
 

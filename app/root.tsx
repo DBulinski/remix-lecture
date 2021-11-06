@@ -21,7 +21,7 @@ export const meta: MetaFunction = () => {
   return { title: "React Days 2021" };
 };
 
-export let links: LinksFunction = () => {
+export const links: LinksFunction = () => {
   return [
     {
       rel: "stylesheet",

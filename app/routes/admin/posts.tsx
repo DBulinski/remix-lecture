@@ -1,6 +1,5 @@
 import {
   ActionFunction,
-  Form,
   Link,
   LinksFunction,
   LoaderFunction,
@@ -8,7 +7,7 @@ import {
   redirect,
   useLoaderData,
 } from "remix";
-import { Cross } from "../../icons/Cross";
+import { RemoveItemForm } from "../../components/RemoveItemForm";
 import { Plus } from "../../icons/Plus";
 import { postsService, Post } from "../../services/postsService";
 
@@ -45,15 +44,7 @@ export default function Admin() {
         <Link to={`/admin/posts/${post.id}`} key={post.id}>
           <img loading="lazy" src={post.src} alt={post.name} />
           <span>{post.name}</span>
-          <Form method="post" action={`/admin/posts?id=${post.id}`}>
-            <button
-              onClick={(e) => e.stopPropagation()}
-              type="submit"
-              className="remove-button"
-            >
-              <Cross />
-            </button>
-          </Form>
+          <RemoveItemForm id={post.id} />
         </Link>
       ))}
     </div>

@@ -17,7 +17,7 @@ if (
 // shouldn't have to do it this way
 // https://github.com/remix-run/remix/issues/240
 type LocationState = undefined | { isSubmission: boolean };
-export function useScrollRestoration(enabled: boolean = true) {
+export function useScrollRestoration(enabled = true) {
   const positions = React.useRef<Map<string, number>>(new Map()).current;
   const location = useLocation();
   const isSubmission = (location.state as LocationState)?.isSubmission ?? false;
