@@ -14,7 +14,7 @@ import { postsService, Post } from "../../services/postsService";
 import classes from "../../styles/admin/admin.css";
 
 export const action: ActionFunction = async ({ request }) => {
-  const params = new URLSearchParams(request.url.split("?").pop());
+  const params = new URLSearchParams(await request.text());
   await postsService.remove(Number(params.get("id")));
   return redirect("/admin/posts");
 };
