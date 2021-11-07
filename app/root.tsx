@@ -79,12 +79,25 @@ export default function App() {
   );
 }
 
+export function ErrorBoundary({ error }: { error: Error }) {
+  return (
+    <PageSkeleton>
+      <h2>Unexpected error happened.</h2>
+      <p>{error.message}</p>
+    </PageSkeleton>
+  );
+}
+
 export function CatchBoundary() {
   const error = useCatch();
 
   return (
     <PageSkeleton>
-      {error.status === 404 ? <h2>Page Not found</h2> : <h2>Unknown error</h2>}
+      {error.status === 404 ? (
+        <h2>Page Not found</h2>
+      ) : (
+        <h2>Unknown error with status {error.status}</h2>
+      )}
     </PageSkeleton>
   );
 }

@@ -1,7 +1,23 @@
 # Welcome to Remix!
 
 - [Remix Docs](https://docs.remix.run)
-- [Customer Dashboard](https://remix.run/dashboard)
+
+
+## React Days 2021
+
+This app has been created for React Days 2021 by Dawid Buliński (PGS Software).
+
+For each step of lecture there is a branch created, so you can always come back to previous section.
+
+step/1-start-exercises
+
+step/2-add-links-and-meta
+
+step/3-add-loader
+
+step/4-add-actions
+
+step/5-add-error-and-catch-boundaries
 
 ## Development
 
@@ -28,27 +44,3 @@ npm start
 ```
 
 Now you'll need to pick a host to deploy it to.
-
-### DIY
-
-If you're familiar with deploying node applications, the built-in Remix app server is production-ready.
-
-Make sure to deploy the output of `remix build`
-
-- `build/`
-- `public/build/`
-
-### Using a Template
-
-When you ran `npm init remix` there were a few choices for hosting. You can run that again to create a new project, then copy over your `app/` folder to the new project that's pre-configured for your target server.
-
-```sh
-cd ..
-# create a new project, and pick a pre-configured host
-npm init remix
-cd my-new-remix-app
-# remove the new project's app (not the old one!)
-rm -rf app
-# copy your app over
-cp -R ../my-old-remix-app/app app
-```

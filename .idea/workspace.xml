@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="04f97155-5219-4b9d-ba49-b2a8450706d1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/RemoveItemForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/RemoveItemForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/admin/posts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/admin/posts.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/posts.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/posts.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/root.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/root.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +57,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="ce158794-3cc9-45f8-90f3-b4adb0e2a877" name="Changes" comment="" />
+      <changelist id="04f97155-5219-4b9d-ba49-b2a8450706d1" name="Changes" comment="" />
       <created>1634584334895</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -74,11 +73,22 @@
       <workItem from="1636048420097" duration="5806000" />
       <workItem from="1636097689180" duration="626000" />
       <workItem from="1636203479760" duration="11354000" />
+      <workItem from="1636314732973" duration="1209000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+      </list>
+    </option>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
