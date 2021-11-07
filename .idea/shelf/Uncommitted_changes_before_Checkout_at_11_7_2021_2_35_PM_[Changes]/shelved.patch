@@ -1,0 +1,49 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"04f97155-5219-4b9d-ba49-b2a8450706d1\" name=\"Changes\" comment=\"\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/app/routes/admin/posts.$id.tsx\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/app/routes/admin/posts.$id.tsx\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/app/routes/admin/posts.add.tsx\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/app/routes/admin/posts.add.tsx\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/app/routes/admin/posts.tsx\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/app/routes/admin/posts.tsx\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"TypeScript File\" />\r\n        <option value=\"TypeScript JSX File\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitSEFilterConfiguration\">\r\n    <file-type-list>\r\n      <filtered-out-file-type name=\"LOCAL_BRANCH\" />\r\n      <filtered-out-file-type name=\"REMOTE_BRANCH\" />\r\n      <filtered-out-file-type name=\"TAG\" />\r\n      <filtered-out-file-type name=\"COMMIT_BY_MESSAGE\" />\r\n    </file-type-list>\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"1zgz4YWaZtYzMZfDVSyEPuXXJX5\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\r\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\r\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\r\n    <property name=\"nodejs_package_manager_path\" value=\"npm\" />\r\n    <property name=\"prettierjs.PrettierConfiguration.Package\" value=\"C:\\privateProjects\\remix\\remix-lecture\\node_modules\\prettier\" />\r\n    <property name=\"settings.editor.selected.configurable\" value=\"preferences.sourceCode.TypeScript\" />\r\n    <property name=\"ts.external.directory.path\" value=\"C:\\privateProjects\\remix\\remix-lecture\\node_modules\\typescript\\lib\" />\r\n    <property name=\"vue.rearranger.settings.migration\" value=\"true\" />\r\n  </component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\privateProjects\\remix\\remix-lecture\\app\\sessions\" />\r\n      <recent name=\"C:\\privateProjects\\remix\\remix-lecture\\app\\styles\\admin\" />\r\n      <recent name=\"C:\\privateProjects\\remix\\remix-lecture\\app\\styles\\blog\" />\r\n      <recent name=\"C:\\privateProjects\\remix\\remix-lecture\\app\" />\r\n      <recent name=\"C:\\privateProjects\\remix\\remix-lecture\\app\\components\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"ce158794-3cc9-45f8-90f3-b4adb0e2a877\" name=\"Changes\" comment=\"\" />\r\n      <created>1634584334895</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1634584334895</updated>\r\n      <workItem from=\"1634584341815\" duration=\"7955000\" />\r\n      <workItem from=\"1634625264460\" duration=\"89000\" />\r\n      <workItem from=\"1634661425296\" duration=\"13589000\" />\r\n      <workItem from=\"1634712463135\" duration=\"76000\" />\r\n      <workItem from=\"1635333054673\" duration=\"1205000\" />\r\n      <workItem from=\"1635364772673\" duration=\"6972000\" />\r\n      <workItem from=\"1635402755840\" duration=\"600000\" />\r\n      <workItem from=\"1635867392461\" duration=\"7264000\" />\r\n      <workItem from=\"1636048420097\" duration=\"5806000\" />\r\n      <workItem from=\"1636097689180\" duration=\"626000\" />\r\n      <workItem from=\"1636203479760\" duration=\"11354000\" />\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"XSLT-Support.FileAssociations.UIState\">\r\n    <expand />\r\n    <select />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 0865248793eeb9ac47bf4851e7f37061b152ecce)
++++ b/.idea/workspace.xml	(date 1636239101089)
+@@ -3,9 +3,6 @@
+   <component name="ChangeListManager">
+     <list default="true" id="04f97155-5219-4b9d-ba49-b2a8450706d1" name="Changes" comment="">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/app/routes/admin/posts.$id.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/admin/posts.$id.tsx" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/app/routes/admin/posts.add.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/admin/posts.add.tsx" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/app/routes/admin/posts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/admin/posts.tsx" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -21,6 +18,11 @@
+     </option>
+   </component>
+   <component name="Git.Settings">
++    <option name="RECENT_BRANCH_BY_REPOSITORY">
++      <map>
++        <entry key="$PROJECT_DIR$" value="step/4-add-actions" />
++      </map>
++    </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
+   <component name="GitSEFilterConfiguration">
+@@ -58,7 +60,7 @@
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+     <task active="true" id="Default" summary="Default task">
+-      <changelist id="ce158794-3cc9-45f8-90f3-b4adb0e2a877" name="Changes" comment="" />
++      <changelist id="04f97155-5219-4b9d-ba49-b2a8450706d1" name="Changes" comment="" />
+       <created>1634584334895</created>
+       <option name="number" value="Default" />
+       <option name="presentableId" value="Default" />
+@@ -74,6 +76,7 @@
+       <workItem from="1636048420097" duration="5806000" />
+       <workItem from="1636097689180" duration="626000" />
+       <workItem from="1636203479760" duration="11354000" />
++      <workItem from="1636236984392" duration="604000" />
+     </task>
+     <servers />
+   </component>

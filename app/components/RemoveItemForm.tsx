@@ -7,7 +7,8 @@ interface RemoveItemFormProps {
 
 export function RemoveItemForm({ id }: RemoveItemFormProps) {
   return (
-    <Form method="post" action={`/admin/posts?id=${id}`}>
+    <Form method="post" action="/admin/posts">
+      <input type="hidden" name="id" value={id} />
       <button
         onClick={(e) => e.stopPropagation()}
         type="submit"
