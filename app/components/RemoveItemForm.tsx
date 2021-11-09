@@ -10,6 +10,7 @@ export function RemoveItemForm({ id }: RemoveItemFormProps) {
     <Form method="post">
       <input type="hidden" name="id" value={id} />
       <button
+        aria-label="Remove post"
         onClick={(e) => e.stopPropagation()}
         type="submit"
         className="remove-button"

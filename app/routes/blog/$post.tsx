@@ -4,6 +4,7 @@ import {
   MetaFunction,
   useLoaderData,
 } from "remix";
+import DOMPurify from "dompurify";
 
 import { postsService, Post } from "../../services/postsService";
 
@@ -29,7 +30,9 @@ export default function Post() {
     <div className="card post-container">
       <img src={post.src} alt={post.name} />
       <h2>{post.name}</h2>
-      <p dangerouslySetInnerHTML={{ __html: post.content }} />
+      <p
+        dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(post.content) }}
+      />
     </div>
   );
 }
